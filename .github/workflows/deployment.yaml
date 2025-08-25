@@ -48,6 +48,11 @@ jobs:
     - name: Update kube config
       run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
 
+    - name: Setup Kubectl
+      uses: azure/setup-kubectl@v4
+      with:
+        version: 'v1.33.4'
+
     - name: Deploy to EKS
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}        
