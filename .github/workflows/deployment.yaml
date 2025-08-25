@@ -6,9 +6,9 @@ on:
     branches: [ master ]
 
 env:
-  ECR_REPOSITORY: flask-app
-  EKS_CLUSTER_NAME: Kubernetes-demo 
-  AWS_REGION: us-east-1
+  ECR_REPOSITORY: fenix/devops-ecr
+  EKS_CLUSTER_NAME: small-eks-cluster
+  AWS_REGION: us-east-2
 
 jobs:
   
